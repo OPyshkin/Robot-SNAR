@@ -18,3 +18,13 @@ C:\AI_1_Lesson\AI_1_Lesson\obj\Debug\AI_1_Lesson.csproj.GenerateResource.cache
 C:\AI_1_Lesson\AI_1_Lesson\obj\Debug\AI_1_Lesson.csproj.CoreCompileInputs.cache
 C:\AI_1_Lesson\AI_1_Lesson\obj\Debug\AI_1_Lesson.exe
 C:\AI_1_Lesson\AI_1_Lesson\obj\Debug\AI_1_Lesson.pdb
+C:\Users\O-Pys\OneDrive\Рабочий стол\Robot\AI_1_Lesson\bin\Debug\AI_1_Lesson.exe.config
+C:\Users\O-Pys\OneDrive\Рабочий стол\Robot\AI_1_Lesson\bin\Debug\AI_1_Lesson.exe
+C:\Users\O-Pys\OneDrive\Рабочий стол\Robot\AI_1_Lesson\bin\Debug\AI_1_Lesson.pdb
+C:\Users\O-Pys\OneDrive\Рабочий стол\Robot\AI_1_Lesson\obj\Debug\AI_1_Lesson.csprojAssemblyReference.cache
+C:\Users\O-Pys\OneDrive\Рабочий стол\Robot\AI_1_Lesson\obj\Debug\AI_1_Lesson.Form1.resources
+C:\Users\O-Pys\OneDrive\Рабочий стол\Robot\AI_1_Lesson\obj\Debug\AI_1_Lesson.Properties.Resources.resources
+C:\Users\O-Pys\OneDrive\Рабочий стол\Robot\AI_1_Lesson\obj\Debug\AI_1_Lesson.csproj.GenerateResource.cache
+C:\Users\O-Pys\OneDrive\Рабочий стол\Robot\AI_1_Lesson\obj\Debug\AI_1_Lesson.csproj.CoreCompileInputs.cache
+C:\Users\O-Pys\OneDrive\Рабочий стол\Robot\AI_1_Lesson\obj\Debug\AI_1_Lesson.exe
+C:\Users\O-Pys\OneDrive\Рабочий стол\Robot\AI_1_Lesson\obj\Debug\AI_1_Lesson.pdb

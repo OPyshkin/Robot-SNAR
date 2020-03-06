@@ -40,8 +40,9 @@ namespace AI_1_Lesson
             
             mapObject1 = new Map();
 
-            mapObject1.fillMap(10);
-
+            mapObject1.fillMap(20,11,12);
+            //mapObject1.DrawMesh(g);
+            textBox1.Text = (mapObject1.field[8].item.Width).ToString();
             timer1.Enabled = true;
         }
 
@@ -50,18 +51,24 @@ namespace AI_1_Lesson
 
         }
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
         private void timer1_Tick_1(object sender, EventArgs e)
         {
             g.Clear(Color.White);
             
-            mapObject1.Draw(g);
+            //mapObject1.DrawColors(g);
+            mapObject1.DrawMesh(g);
             //g.DrawRectangle(Pens.Black, x++, y, 10, 20);
-            r.Draw(g);
-            o1.Draw(g);
-            o2.Draw(g);
-            r.rot_speed = (float)Math.Sin(time * 5);
+            //r.Draw(g);
+            //o1.Draw(g);
+            //o2.Draw(g);
+            //r.rot_speed = (float)Math.Sin(time * 5);
             
-            r.Sim(0.1f);
+            //r.Sim(0.1f);
             time += 0.1f;
             pictureBox1.Refresh();
             //x++;
