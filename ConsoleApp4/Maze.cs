@@ -24,7 +24,7 @@ namespace ConsoleApp4
         public Maze(int width, int height)
         {
             start = new Cell(1, 1, true, true);
-            finish = new Cell(width - 3, height - 3, true, true);
+            finish = new Cell(width - 2, height - 2, true, true);
 
 
             _width = width;
@@ -70,29 +70,7 @@ namespace ConsoleApp4
             }
         }
 
-        public void DrawGrid()
-        {
-            Console.CursorVisible = false;
-            for (var i = 0; i < _cells.GetUpperBound(0); i++)
-                for (var j = 0; j < _cells.GetUpperBound(1); j++)
-                {
-                    Console.SetCursorPosition(i, j);
-                    if (_cells[i, j]._isCell)
-                    {
 
-                        Console.Write(" ");
-                    }
-                    else
-                    {
-
-                        Console.Write("#");
-                    }
-                }
-            Console.SetCursorPosition(start.X, start.Y);
-            Console.Write("i");
-            Console.SetCursorPosition(finish.X, finish.Y);
-            Console.Write("o");
-        }
 
 
         private void GetNeighbours(Cell localcell) // Получаем соседа текущей клетки
@@ -124,10 +102,8 @@ namespace ConsoleApp4
         
         private Cell ChooseNeighbour(List<Cell> neighbours) //выбор случайного соседа
         {
-
             int r = rnd.Next(neighbours.Count);
             return neighbours[r];
-
         }
 
         private void RemoveWall(Cell first, Cell second)
@@ -144,5 +120,42 @@ namespace ConsoleApp4
             _cells[second.X, second.Y] = second;
 
         }
+        public void DrawGrid(Graphics g, int cellSize)
+        {
+            Pen pen = new Pen(Color.Black, 2);
+            pen.Alignment = PenAlignment.Inset;
+            SolidBrush redBrush = new SolidBrush(Color.FromArgb(0xff, 0xff, 0x00, 0x00));
+            SolidBrush greenBrush = new SolidBrush(Color.FromArgb(0xff, 0x00, 0xFF, 0x00));
+            SolidBrush whiteBrush = new SolidBrush(Color.FromArgb(0xff, 0xFF, 0xFF, 0xFF));
+            for ( int i =0; i<_height;i++)
+            {
+                for (int j = 0; j < _height; j++)
+                {
+                    Rectangle cellRect = new Rectangle(_cells[i, j].X* cellSize, _cells[i, j].Y* cellSize, cellSize, cellSize);
+                    if (_cells[i, j]._isCell == true)
+                    {
+                        g.FillRectangle(redBrush, cellRect);
+                    }
+                    else if (_cells[i, j]._isCell == false)
+                    {
+                        g.FillRectangle(greenBrush, cellRect);
+                    }
+                    if (start.X == _cells[i, j].X && start.Y == _cells[i, j].Y)
+                    {
+                        g.FillRectangle(whiteBrush, cellRect);
+                    }
+                    if (finish.X == _cells[i, j].X && finish.Y == _cells[i, j].Y)
+                    {
+                        g.FillRectangle(whiteBrush, cellRect);
+                    }
+
+                    g.DrawRectangle(pen, cellRect);
+
+                }
+            }
+            
+        }
     }
 }
+
+        
